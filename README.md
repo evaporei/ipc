@@ -56,7 +56,21 @@ speak: wrote 6 bytes
 ^C⏎
 ```
 
+## Sockets
+
+I played more with them [here](https://github.com/evaporei/csi/blob/main/networks).
+
+```bash
+$ cc -o spair spair.c
+$ ./spair
+parent: sent 'b'
+child: read 'b'
+child: sent 'B'
+parent: read 'B'
+```
+
 ## References:
 
 - https://beej.us/guide/bgipc/html//index.html#pipes
 - https://beej.us/guide/bgipc/html//index.html#fifos
+- https://beej.us/guide/bgipc/html//index.html#unixsock
