@@ -30,6 +30,33 @@ $ ./count
 12
 ```
 
+## FIFOs
+
+You'll need two terminals.
+
+```bash
+$ cc -o tick tick.c
+$ ./tick
+waiting for writers...
+got a writer
+tick: read 6 bytes: "hallo
+"
+tick: read 0 bytes: ""
+```
+
+Second:
+
+```bash
+$ cc -o speak speak.c
+$ ./speak
+waiting for readers...
+got a reader--type some stuff
+hallo
+speak: wrote 6 bytes
+^C⏎
+```
+
 ## References:
 
 - https://beej.us/guide/bgipc/html//index.html#pipes
+- https://beej.us/guide/bgipc/html//index.html#fifos
